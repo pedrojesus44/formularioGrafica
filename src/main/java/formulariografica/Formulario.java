@@ -4,6 +4,8 @@
  */
 package formulariografica;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Admin
@@ -15,6 +17,8 @@ public class Formulario extends javax.swing.JFrame {
      */
     public Formulario() {
         initComponents();
+        setResizable(true);
+        
     }
 
     /**
@@ -229,10 +233,20 @@ public class Formulario extends javax.swing.JFrame {
     private void cadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarActionPerformed
         Cadastro formulario = new Cadastro();
         formulario.setVisible(true);
-        double codcliente,cep, celular, telefone, datanasc, datacastro;
+        int celular, telefone, datanasc, datacastro, codcliente, cep;
         String nome, endereco, bairro, cidade, estado, sexo;
-        codcliente = Double.parseDouble(txt1.getText());
+        codcliente = Integer.parseInt(txt1.getText());
         nome = txt2.getText();
+        endereco = txt3.getText();
+        bairro = txt4.getText();
+        cidade = txt5.getText();
+        cep = Integer.parseInt(txt7.getText());
+        celular = Integer.parseInt(txt9.getText());
+        telefone = Integer.parseInt(txt10.getText());
+        datanasc = Integer.parseInt(txt11.getText());
+        datacastro = Integer.parseInt(txt12.getText());
+        
+        JOptionPane.showMessageDialog(null, codcliente);
     }//GEN-LAST:event_cadastrarActionPerformed
 
     private void fecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fecharActionPerformed
@@ -240,7 +254,17 @@ public class Formulario extends javax.swing.JFrame {
     }//GEN-LAST:event_fecharActionPerformed
 
     private void limparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_limparActionPerformed
-        
+        txt1.setText(null);
+        txt2.setText(null);
+        txt3.setText(null);
+        txt4.setText(null);
+        txt5.setText(null);
+        txt7.setText(null);
+        txt9.setText(null);
+        txt10.setText(null);
+        txt11.setText(null);
+        txt12.setText(null);
+        txt1.requestFocus();
     }//GEN-LAST:event_limparActionPerformed
 
     /**

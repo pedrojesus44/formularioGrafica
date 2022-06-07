@@ -18,6 +18,7 @@ public class Cadastro extends javax.swing.JFrame {
      */
     public Cadastro() {
         initComponents();
+        
     }
 
     /**
@@ -42,6 +43,7 @@ public class Cadastro extends javax.swing.JFrame {
         res11 = new javax.swing.JLabel();
         res12 = new javax.swing.JLabel();
         titulo = new javax.swing.JLabel();
+        Fechar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -73,6 +75,13 @@ public class Cadastro extends javax.swing.JFrame {
         titulo.setForeground(new java.awt.Color(255, 0, 0));
         titulo.setText("Informações");
 
+        Fechar.setText("Fechar");
+        Fechar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                FecharActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -80,24 +89,30 @@ public class Cadastro extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(res1)
-                            .addComponent(res2)
-                            .addComponent(res3)
-                            .addComponent(res4)
-                            .addComponent(res5)
-                            .addComponent(res6)
-                            .addComponent(res7)
-                            .addComponent(res8)
-                            .addComponent(res9)
-                            .addComponent(res10)
-                            .addComponent(res11)
-                            .addComponent(res12)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(158, 158, 158)
-                        .addComponent(titulo)))
-                .addContainerGap(163, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(res1)
+                                    .addComponent(res2)
+                                    .addComponent(res3)
+                                    .addComponent(res4)
+                                    .addComponent(res5)
+                                    .addComponent(res6)
+                                    .addComponent(res7)
+                                    .addComponent(res8)
+                                    .addComponent(res9)
+                                    .addComponent(res10)
+                                    .addComponent(res11)
+                                    .addComponent(res12)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(158, 158, 158)
+                                .addComponent(titulo)))
+                        .addGap(0, 151, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(Fechar)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -128,16 +143,23 @@ public class Cadastro extends javax.swing.JFrame {
                 .addComponent(res11)
                 .addGap(18, 18, 18)
                 .addComponent(res12)
-                .addGap(56, 56, 56))
+                .addGap(18, 18, 18)
+                .addComponent(Fechar)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void FecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FecharActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_FecharActionPerformed
+
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
+        Formulario forms = new Formulario();
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -170,6 +192,7 @@ public class Cadastro extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton Fechar;
     public javax.swing.JLabel res1;
     public javax.swing.JLabel res10;
     public javax.swing.JLabel res11;
