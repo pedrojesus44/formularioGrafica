@@ -5,6 +5,7 @@
 package formulariografica;
 
 import javax.swing.JOptionPane;
+import modelo.ModeloJFrame;
 
 /**
  *
@@ -231,22 +232,34 @@ public class Formulario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void cadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cadastrarActionPerformed
-        Cadastro formulario = new Cadastro();
-        formulario.setVisible(true);
-        int celular, telefone, datanasc, datacastro, codcliente, cep;
-        String nome, endereco, bairro, cidade, estado, sexo;
-        codcliente = Integer.parseInt(txt1.getText());
-        nome = txt2.getText();
-        endereco = txt3.getText();
-        bairro = txt4.getText();
-        cidade = txt5.getText();
-        cep = Integer.parseInt(txt7.getText());
-        celular = Integer.parseInt(txt9.getText());
-        telefone = Integer.parseInt(txt10.getText());
-        datanasc = Integer.parseInt(txt11.getText());
-        datacastro = Integer.parseInt(txt12.getText());
-        
-        JOptionPane.showMessageDialog(null, codcliente);
+     
+        //int celular, telefone, datanasc, datacastro, codcliente, cep;
+       // String nome, endereco, bairro, cidade, estado, sexo;
+        //codcliente = Integer.parseInt(txt1.getText());
+       // nome = txt2.getText();
+        //endereco = txt3.getText();
+       // bairro = txt4.getText();
+       // cidade = txt5.getText();
+       // cep = Integer.parseInt(txt7.getText());
+      //  celular = Integer.parseInt(txt9.getText());
+        //telefone = Integer.parseInt(txt10.getText());
+       // datanasc = Integer.parseInt(txt11.getText());
+       // datacastro = Integer.parseInt(txt12.getText());
+        Cadastro res = new Cadastro();
+        ModeloJFrame model = new ModeloJFrame();
+        res.setVisible(true);      
+        model.setStr_codcliente(txt1.getText());
+        model.setNome(txt2.getText());
+        model.setEndereco(txt3.getText());
+        model.setBairro(txt4.getText());
+        model.setCidade(txt5.getText());
+        model.setStr_cep(txt7.getText());
+        model.setStr_celular(txt9.getText());
+        model.setStr_telefone(txt10.getText());
+        model.setStr_datanasc(txt11.getText());
+        model.setStr_datacadastro(txt12.getText());
+        res.exportarComponente(model);
+       
     }//GEN-LAST:event_cadastrarActionPerformed
 
     private void fecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fecharActionPerformed
